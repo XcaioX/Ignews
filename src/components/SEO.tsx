@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
-interface SEOProps {
+type SEOProps = {
   title: string
-  description: string
-  image: string
-  shouldExcludeTitleSufix: boolean
-  shouldIndexPage: boolean
+  description?: string
+  image?: string
+  shouldExcludeTitleSufix?: boolean
+  shouldIndexPage?: boolean
 }
 
-const SEO: React.FC<SEOProps> = ({
+export const SEO: React.FC<SEOProps> = ({
   title,
   description,
   image,
@@ -59,5 +59,3 @@ const SEO: React.FC<SEOProps> = ({
     </Head>
   )
 }
-
-export default SEO

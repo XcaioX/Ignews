@@ -32,6 +32,9 @@
     "react/prop-types": "off",
     "generator-star-spacing": "off",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "multiline-ternary": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "camelcase": "off"
   }
 }
