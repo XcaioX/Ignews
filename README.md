@@ -5,7 +5,9 @@
 
 
 ### Stack
+
 </hr>
+
 All the tools that I use for this project is listed bellow:
 
 - **FaunaDB** (to store the users and subscriptions)
@@ -15,7 +17,9 @@ All the tools that I use for this project is listed bellow:
 - **Prismic** (to handle the post creation)
 
 ### Preview
+
 </hr>
+
 ###### Homepage
 
 <img align="center" src="./assets/homepage.png" >
