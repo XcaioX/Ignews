@@ -1,7 +1,7 @@
 # Ignews
 
-In this app you can subscribe to have entirely access to all newsletter 
-Project made by following the Ignite bootcamp provided by Rocketseat
+<p>In this app you can subscribe to have entirely access to all newsletter</p>
+<p>Project made by following the Ignite bootcamp provided by Rocketseat</p>
 
 
 ### Stack
