@@ -1,7 +1,7 @@
 # Ignews
 
-<p>In this app you can subscribe to have entirely access to all newsletter</p>
-<p>Project made by following the Ignite bootcamp provided by Rocketseat</p>
+<p>In this app, you can subscribe to have entire access to all newsletter</p>
+<p>Project made by following the Ignite Bootcamp provided by Rocketseat</p>
 
 ## Execute the project
 
