@@ -5,9 +5,9 @@
 
 ### Run the project
 
-    > **yarn** to install the dependencies
-    > **yarn run dev** to execute the app
-    > Fulfill the **env.local** variables (use env.example)
+- **yarn** to install the dependencies
+- **yarn run dev** to execute the app
+- Fulfill the **env.local** variables (use env.example)
 
 ### Stack
 
