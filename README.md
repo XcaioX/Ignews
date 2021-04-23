@@ -3,7 +3,7 @@
 <p>In this app you can subscribe to have entirely access to all newsletter</p>
 <p>Project made by following the Ignite bootcamp provided by Rocketseat</p>
 
-### Run the project
+### Execute the project
 
 - **yarn** to install the dependencies
 - **yarn run dev** to execute the app
