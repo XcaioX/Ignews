@@ -3,13 +3,13 @@
 <p>In this app you can subscribe to have entirely access to all newsletter</p>
 <p>Project made by following the Ignite bootcamp provided by Rocketseat</p>
 
-### Execute the project
+## Execute the project
 
 - **yarn** to install the dependencies
 - **yarn run dev** to execute the app
 - Fulfill the **env.local** variables (use env.example)
 
-### Stack
+## Stack
 
 </hr>
 
@@ -21,7 +21,7 @@ All the tools that I use for this project is listed bellow:
 - **Next-auth** (to handle authentication)
 - **Prismic** (to handle the post creation)
 
-### Preview
+## Preview
 
 </hr>
 
