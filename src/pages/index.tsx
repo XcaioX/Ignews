@@ -5,7 +5,7 @@ import { SubscribeButton } from '../components/SubscribeButton'
 import { stripe } from '@/services/stripe'
 import { formatPrice } from '@/utils/formatValues'
 
-import styles from './home.module.scss'
+import { Container } from '@/styles/home'
 
 type HomeProps = {
   product: {
@@ -19,8 +19,8 @@ const Home: React.FC<HomeProps> = ({ product }) => {
     <>
       <SEO title="Home" />
 
-      <main className={styles.contentContainer}>
-        <section className={styles.hero}>
+      <Container>
+        <section>
           <span>👏 Hey, welcome</span>
           <h1>
             News about the <span>React</span> world.
@@ -33,7 +33,7 @@ const Home: React.FC<HomeProps> = ({ product }) => {
         </section>
 
         <img src="/images/avatar.svg" alt="Girl coding!" />
-      </main>
+      </Container>
     </>
   )
 }

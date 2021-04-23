@@ -1,19 +1,24 @@
+import { ActiveLink } from '../ActiveLink'
 import { SignInButton } from '../SignInButton'
 
-import styles from './style.module.scss'
+import { Container, Content, NavigationLinks } from './styles'
 
 export const Header: React.FC = () => {
   return (
-    <header className={styles.headerContainer}>
-      <div className={styles.headerContent}>
+    <Container>
+      <Content>
         <img src="/images/logo.svg" alt="ig.newss" />
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Posts</a>
+          <ActiveLink href="/">
+            <NavigationLinks>Home</NavigationLinks>
+          </ActiveLink>
+          <ActiveLink href="/posts" prefetch>
+            <NavigationLinks>Posts</NavigationLinks>
+          </ActiveLink>
         </nav>
 
         <SignInButton />
-      </div>
-    </header>
+      </Content>
+    </Container>
   )
 }

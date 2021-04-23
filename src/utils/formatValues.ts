@@ -8,3 +8,11 @@ export const formatPrice = (
     currency
   }).format(price)
 }
+
+export const formatDate = (date: string, format: string): string => {
+  return new Date(date).toLocaleDateString(format, {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  })
+}

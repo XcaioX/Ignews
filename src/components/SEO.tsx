@@ -15,12 +15,14 @@ export const SEO: React.FC<SEOProps> = ({
   shouldExcludeTitleSufix = false,
   shouldIndexPage = true
 }) => {
-  const pageTitle = `${title} ${!shouldExcludeTitleSufix ? '| Prefix' : ''}`
-  const pageImage = image ? `${process.env.NEXT_PUBLIC_URI}/${image}` : null
+  const pageTitle = `${title} ${!shouldExcludeTitleSufix ? ' | Ignews' : ''}`
+  const pageImage = image
+    ? `${process.env.NEXT_PUBLIC_URI}/${image}`
+    : `${process.env.NEXT_PUBLIC_URI}/favicon.png`
 
   return (
     <Head>
-      <title>${pageTitle}</title>
+      <title>{pageTitle}</title>
 
       {description && <meta name="description" content={description} />}
       {pageImage && <meta name="image" content={pageImage} />}

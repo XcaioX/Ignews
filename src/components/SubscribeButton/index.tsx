@@ -3,20 +3,26 @@ import { signIn, useSession } from 'next-auth/client'
 import { getStripeJs } from '@/services/stripe-js'
 import { api } from '@/services/api'
 
-import style from './style.module.scss'
+import { Container } from './styles'
+import { useRouter } from 'next/dist/client/router'
+import { SessionProps } from '@/@types'
 
 type SubscribeButtonProps = {
   priceId: string
 }
 
-export const SubscribeButton: React.FC<SubscribeButtonProps> = ({
-  priceId
-}) => {
+export const SubscribeButton: React.FC<SubscribeButtonProps> = () => {
   const [session] = useSession()
+  const router = useRouter()
 
   const handleSubscribe = async () => {
     if (!session) {
       signIn('github')
+      return
+    }
+
+    if ((session as SessionProps).activeSubscription) {
+      router.push('/posts')
       return
     }
 
@@ -33,12 +39,8 @@ export const SubscribeButton: React.FC<SubscribeButtonProps> = ({
   }
 
   return (
-    <button
-      type="button"
-      className={style.subscribeButton}
-      onClick={handleSubscribe}
-    >
+    <Container type="button" onClick={handleSubscribe}>
       Subscribe now
-    </button>
+    </Container>
   )
 }

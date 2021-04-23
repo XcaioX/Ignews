@@ -1,4 +1,6 @@
-.subscribeButton {
+import styled from 'styled-components'
+
+export const Container = styled.button`
   width: 260px;
   height: 4rem;
   border: 0;
@@ -17,4 +19,4 @@
   &:hover {
     filter: brightness(0.8);
   }
-}
+`

@@ -35,6 +35,8 @@
     "@typescript-eslint/no-explicit-any": "off",
     "multiline-ternary": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "no-case-declarations": "off",
+    "@typescript-eslint/ban-types": "off"
   }
 }

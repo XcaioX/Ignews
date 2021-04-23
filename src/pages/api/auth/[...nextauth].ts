@@ -14,10 +14,44 @@ export default NextAuth({
     })
   ],
   jwt: {
-    signingKey: process.env.SIGNIN_KEY
+    signingKey: process.env.JWT_SIGNING_PRIVATE_KEY
   },
   callbacks: {
-    async signIn(user, account, profile) {
+    async session(session) {
+      try {
+        const userActiveSubscription = await fauna.query(
+          q.Get(
+            q.Intersection(
+              q.Match(
+                q.Index('subscription_by_user_ref'),
+                q.Select(
+                  'ref',
+                  q.Get(
+                    q.Match(
+                      q.Index('user_by_email'),
+                      q.Casefold(session.user.email)
+                    )
+                  )
+                )
+              ),
+              q.Match(q.Index('subscription_by_status'), 'active')
+            )
+          )
+        )
+
+        return {
+          ...session,
+          activeSubscription: userActiveSubscription
+        }
+      } catch (error) {
+        return {
+          ...session,
+          activeSubscription: null
+        }
+      }
+    },
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    async signIn(user, _account, _profile) {
       const { email } = user
 
       try {
