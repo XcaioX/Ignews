@@ -10,6 +10,7 @@ All the tools that I use for this project is listed bellow:
 - **Stripe** (to handle subscriptions)
 - **Next** (as the react framework)
 - **Next-auth** (to handle authentication)
+- **Prismic** (to handle the post creation)
 
 ### Preview
 
