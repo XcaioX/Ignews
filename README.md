@@ -1,3 +1,7 @@
+# Archived
+
+This was made some time ago, I'm not gonna update but also I'm not gonna delete it, so I decided to archive
+
 # Ignews
 
 <p>In this app, you can subscribe to have entire access to all newsletter</p>
